@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='https://fonts.googleapis.com/css?family=Audiowide&family=Geist+Mono' rel='stylesheet'>
+        <title>Calculator</title>
+        <style>
+            body{
+                background: white; 
+                display: flex; 
+                justify-content: center; 
+                align-items: center; 
+                font-family: "Audiowide", serif;
+                font-size: 28px;
+            }
+            #calculator {
+                background: #2e1766;
+                width: 315px;
+                height: 460px;
+                border: 6px solid #2e1766; 
+                border-radius: 14px;
+            }
+            #result {
+                background: #d6d9ee; 
+                text-align: right; 
+                min-height: 2.5em; 
+                line-height: 2.5em; 
+                padding-right: 1em; 
+                font-size: 34px;
+                border-bottom: 2px solid #393D3F;
+                color: #2e1766;
+                font-weight: bold;
+            }
+            #buttons {
+                display: flex; 
+                flex-wrap: wrap;
+               
+            }
+            button {
+                margin: 0.5em; 
+                width: calc(25% - 1e);
+                background: #94036d; 
+                color: #F7EBEC; 
+                border-color: #F7EBEC;
+                padding: 0.5em; 
+                font-size: 28px;
+                font-weight: bold;
+                font-family: "Geist Mono", monospace;
+                border-radius: 50%;
+               
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="calculator">
+            <div id="result"></div>
+            <div id="buttons">
+                <button class="numberButton" onClick="clickNumber(7)">7</button>
+                <button class="numberButton" onClick="clickNumber(8)">8</button>
+                <button class="numberButton" onClick="clickNumber(9)">9</button>
+                <button class="operatorButton" onClick="clickOperator('/')">/</button>
+                
+                <button class="numberButton" onClick="clickNumber(4)">4</button>
+                <button class="numberButton" onClick="clickNumber(5)">5</button>
+                <button class="numberButton" onClick="clickNumber(6)">6</button>
+                <button class="operatorButton" onClick="clickOperator('*')">x</button>
+
+                <button class="numberButton" onClick="clickNumber(1)">1</button>
+                <button class="numberButton" onClick="clickNumber(2)">2</button>
+                <button class="numberButton" onClick="clickNumber(3)">3</button>
+                <button class="operatorButton" onClick="clickOperator('-')">-</button>
+
+                <button class="numberButton" onClick="clickNumber(0)">0</button>
+                <button class="resetButton" onClick="clearResult()">C</button>
+                <button class="equalsButton" onClick="showResult()">=</button>
+                <button class="operatorButton" onClick="clickOperator('+')">+</button>
+                
+                
+            </div>
+        </div>
+
+        <script src="js/calculator.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>

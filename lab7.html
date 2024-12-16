@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animation</title>
+    <style>
+        #animatedBox { 
+            width: 100px; 
+            height: 100px; 
+            position: absolute; 
+            top: 100px;
+            animation-name: slide; 
+            animation-duration: 5s; 
+            animation-iteration-count: infinite; 
+            animation-direction: alternate;
+        }
+
+            @keyframes slide {
+                from {top: 100px; background: red;}
+                to {top: 400px; background: blue;}
+            }
+    </style>
+    </head>
+
+<body>
+    <div id="animatedBox"></div>
+</body>
+</html>
+

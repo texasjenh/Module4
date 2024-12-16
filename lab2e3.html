@@ -31,24 +31,24 @@
 
     <body>
 
-        <template id="artist-template" >
+        <template id="artist-template">
             <div class="card">
-                <div class="card-body" >
-                    <div class="card-title" ></div>
-                    <div class="portfolio-items" ></div>
+                <div class="card-body">
+                    <div class="card-title"></div>
+                    <div class="portfolio-items"></div>
                 </div>
             </div>
-        </template >
+        </template>
  
-        <template id="portfolio-template" >
+        <template id="portfolio-template">
             <div class="portfolio-item">
                 <div class="portfolio-item-title"></div>
                 <img class="portfolio-item-image" width="600">
             </div>
-        </template >
+        </template>
 
         <h1>Module 4 Lab Exercise #2 - Part 3</h1>
-        <div id = "card-list"></div>
+        <div id="card-list"></div>
 
         <script>      
     
@@ -60,16 +60,16 @@
             ]
         }
 
-        const artists = [{
-            name: "Georgia O'Keefe",
+        const artists = [
+            {name: "Georgia O'Keefe",
             portfolio: [
-                {title: "Music Pink and Blue 1918", url: "https://uploads1.wikiart.org/images/georgia-o-keeffe/music-pink-and-blue-ii.jpg!Large.jpg"},
+                {title: "Music Pink and Blue 1918", url:"https://uploads1.wikiart.org/images/georgia-o-keeffe/music-pink-and-blue-ii.jpg!Large.jpg"},
                 {title: "Music Pink and Blue II", url:"https://www.georgiaokeeffe.net/assets/img/thumbs/music-pink-and-blue-ii.jpg"},
             ]},
             {name: "Mary Cassat",
             portfolio: [
-                {title: "Child in a Straw Hat", url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Child_in_a_Straw_Hat_by_Mary_Cassatt_c1886.jpg/1200px-Child_in_a_Straw_Hat_by_Mary_Cassatt_c1886.jpg"},
-                {title: "The Child's Bath", url: "https://upload.wikimedia.org/wikipedia/commons/7/72/Mary_Cassatt_-_The_Child%27s_Bath_-_Google_Art_Project.jpg"}
+                {title: "Child in a Straw Hat", url:"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Child_in_a_Straw_Hat_by_Mary_Cassatt_c1886.jpg/1200px-Child_in_a_Straw_Hat_by_Mary_Cassatt_c1886.jpg"},
+                {title: "The Child's Bath", url:"https://upload.wikimedia.org/wikipedia/commons/7/72/Mary_Cassatt_-_The_Child%27s_Bath_-_Google_Art_Project.jpg"}
             ]}   
         ]
 
@@ -83,11 +83,12 @@
                 itemTemplate.querySelector('.portfolio-item-title').innerText = item.title;
                 itemTemplate.querySelector('.portfolio-item-image').src = item.url;
                 itemTemplate.querySelector('.portfolio-item-image').alt = item.title;
-            });
+                template.querySelector('.portfolio-items').appendChild(itemTemplate);
+            })
 
                 document.querySelector('#card-list').appendChild(template);
             }
-                addArtist(artist.name, artist.portfolio)
+                addArtist(artist.name, artist.portfolio);
 
                 artists.forEach(artist => addArtist(artist.name, artist.portfolio))
                 
